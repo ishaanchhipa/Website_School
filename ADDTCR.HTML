@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="admin.css">
+<script>
+function formValidation(){
+	var tname=document.teacher.NAME;
+	var tid=document.teacher.TID;
+	var pass=document.teacher.pass;
+	var age=document.teacher.age;
+	var gender=document.teacher.gender;
+	var course=document.teacher.crs;
+	var contact=document.teacher.ctc;
+	var address=document.teacher.add;
+	if (name_val(tname)){
+		if (teacher_id(tid)){
+			if(pass_val(pass)){
+				if (age_val(age)){
+					if (gender_val(gender)){
+						if (course_val(course)){
+							if (no_val(contact)){
+								if (addr_val(address)){
+									return true;}}}}}}}}
+	return false;
+}
+function name_val(tname){
+	var letters1 = /^[a-zA-Z][a-zA-Z ]{2,}$/;
+	if(tname.value.match(letters1)){
+		return true;
+	}
+	else{
+		alert('Enter the Name');
+		return false;
+	}
+}
+function teacher_id(tid){
+	var tidformat=/^([a-zA-Z]{5})+([0-9]{3})$/;
+	if(tid.value.match(tidformat)){
+		return true;
+	}
+	else{
+		alert('Invalid TeacherID');
+		return false;
+	}
+}
+function pass_val(pass){
+	if(pass.value==""){
+	alert('Please enter the password.')
+	return false;
+	}
+	return true;
+}
+function age_val(age){
+	var num1 = /^[0-9]{1,2}$/;
+	if(age.value == ""){
+		alert('Enter the Age');
+	}
+	else if(age.value.match(num1)){
+		return true;
+	}
+	else{
+		alert('Invalid Age');
+		return false;
+	}
+}
+function gender_val(gender) {
+        var gen = form.querySelectorAll('input[name="gender"]:checked');
+        if (!gen.length) {
+            alert('You must select a gender');
+            return false;
+        }
+    }
+function course_val(course){
+	if(course.value==""){
+	alert('Please enter the Course.')
+	return false;
+	}
+	return true;
+}
+function no_val(contact){
+	var num1 = /^[0-9]{10}$/;
+	if(contact.value == ""){
+		alert('Enter the Number');
+	}
+	else if(contact.value.match(num1)){
+		return true;
+	}
+	else{
+		alert('Invalid Number');
+		return false;
+	}
+}
+function addr_val(addr){
+	var paddz = /^[A-Za-z]+$/;
+	if(addr.value.match(paddz)){
+		return true;
+	}
+	else{
+		alert('Enter the Address');
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+	<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/ADMIN.HTM">ADMIN INFO</a></li>
+			<li><a href="ADDSTD.HTML">ADD STUDENT</a></li>
+			<li><a href="ADDTCR.HTML">ADD TEACHER</a></li>
+			<li><a href="/home.html">LOG OUT</a></li>
+		</ul>
+		
+	</div>
+	</div>
+	<div class="TCRform" align="center">
+	<form id="addtcr" action="/ADDTCR.HTML" method="post">
+	<table>	
+	<tr><td>Name:</td><td><input type="text" name="NAME" id="name"></td></tr>
+	<tr><td>Teacher ID:</td><td><input type="text" name="TID" id="TID"></td></tr>
+	<tr><td>Password:</td><td><input type="password" name="pass" id="pass"></td></tr>
+	<tr><td>Date of Birth:</td><td><input type="date" name="dob" id="date"></td></tr>
+	<tr><td>Age:</td><td><input type="text" name="age" id="age"></td></tr>
+	<tr><td>Gender:</td><td><input type="radio" name="gender" value="male" id="gender">Male&nbsp;&nbsp;<input type="radio" name="gender" value="female" id="gender">Female&nbsp;&nbsp;<input type="radio" name="gender" value="other" id="gender">Other</td></tr>
+	<tr><td>Course:</td><td><input type="text" name="crs" id="course"></td></tr>
+	<tr><td>Contact:</td><td><input type="text" name="ctc" id="contact"></td></tr>
+	<tr><td>Address:</td><td><textarea name="add" placeholder="Enter Text Here..." id="address"></textarea></td></tr>
+	<tr><td><button class="button" type="submit" value="submit" onclick="formValidation()">ADD</button></td><td><button class="button" type="reset" value="reset">Clear</button></td></tr>
+	</table>
+	</form>
+	</div>
+<div class="bottom"></div>
+	</body>
+	</html>

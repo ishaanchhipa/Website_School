@@ -1,0 +1,26 @@
+.infra h1{
+	padding-left: 20px;
+	background-color:#c5ebeb;
+	margin-top:0px;
+}
+
+.infra p{
+	padding-left: 10%;
+	padding-right: 10%;
+	color:#014186;
+}
+
+.infra ul{
+	background-color:white;
+	list-style-type:circle;
+	padding-left: 15%;
+	padding-right: 15%;
+	color:#014186;
+	display: block;
+	line-height:180%
+}
+.bottom{
+	height:5px;
+	background-color:#33cccc;
+}
+

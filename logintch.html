@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="name">
+    <table align="center">
+    <tr>
+      <td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+      <td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+    </tr>
+    </table>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="/aboutus.html">ABOUT US</a></li>
+        <li><a href="academic.html">ACADEMICS</a></li>
+        <li><a href="infra.html">INFRASTRUCTURE</a></li>
+        <li><a href="admissions.html">ADMISSIONS</a></li>
+        <li><a href="loginstu.html">STUDENT LOGIN</a></li>
+        <li><a href="logintch.html">TEACHER LOGIN</a></li>
+        <li><a href="loginadmin.html">ADMIN LOGIN</a></li>
+      </ul>
+    
+  
+    </div>
+<form class="modal-content animate" action="/logintch.html" method="post">
+   <h1>TEACHER LOGIN</h1> 
+  
+  <div class="imgcontainer">
+      <img src="login.png" alt="Avatar" class="avatar" height='1px' width='1px'>
+    </div>
+
+    <div class="container">
+	
+      <label for="uname"><b>Username</b></label>
+      <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+      <br><br>
+      <button class="s" type="submit" onclick="login()">Login</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

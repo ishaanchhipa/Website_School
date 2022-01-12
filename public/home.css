@@ -1,0 +1,340 @@
+body{
+	margin:0;
+}
+
+.name{
+	width:100%;
+	text-align:center;
+	font-family:Bahnschrift;
+	font-size:20px;
+}
+
+.name a:link {
+  text-decoration: none;
+  color:black;
+}
+
+.name a:visited {
+  text-decoration: none;
+  color:black;
+}
+
+.name a:hover {
+  text-decoration: none;
+  color:black;
+}
+
+.name a:active {
+  text-decoration: none;
+  color:black;
+}
+
+.navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #33cccc;
+  justify-content: center;
+  display: flex;
+}
+
+.navbar li {
+  float: left;
+  font-family:Bahnschrift;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+  margin:0 2px;
+  border-radius:35px;
+}
+
+.navbar li a:hover {
+  background-color: white;
+  color:#33cccc;
+}
+.spotlight{
+    justify-content: center;
+    display: flex;
+
+}
+
+.up-events .day{
+	background-color:#33cccc;
+	color:white;
+	width:80px;
+	text-align:center;
+	border-radius:12px;
+	padding: 10px 0;
+	margin-left:5px;
+	margin-right:5px;
+}
+.spotlight table{
+	border-collapse: separate;
+    border-spacing: 0px 20px;
+	font-family:Trebuchet MS;
+}
+
+.spotlight table th{
+	color:#014186;	
+	font-size:25px;
+	padding:40px 0 40px 0;
+	text-align:left;
+}
+.spotlight table th::first-letter{
+	font-size:35px;
+}
+.up-events table td{
+	margin-bottom:20px;
+}
+.up-events table .day p{
+	padding:0;
+	margin:0;
+}
+.up-events table .event{
+	padding:28px 0 28px 60px;
+	font-size:25px;
+	color:#014186;
+}
+.day .date{
+	font-size:45px;
+}
+.day .month{
+	font-size:12px;
+	
+}
+
+.latest-news table{
+	margin-left:150px;
+}
+.latest-news table td{
+	border-bottom:1px solid rgb(204,204,204);
+	padding:15px 15px 15px 0;
+	width:450px;
+}
+.latest-news table .info{
+	font-size:23px;
+	color:#014186;
+	margin:0;
+}
+
+.news .time p{
+	font-size:15px;
+	padding:0;
+	margin-top:10px;
+	margin-bottom:0;
+	color:#949494;
+}
+.news .time img{
+	margin-top:2px;
+	margin-right:2px;
+}
+
+.record{
+	background-color: #33cccc;
+	padding: 50px;
+}
+.record img{
+	margin-left:75px;
+	margin-right:75px;
+}
+.record table td{
+	font-family:Bahnschrift;
+	color: white;
+	font-weight:bold;
+}
+.record-info{
+	font-size:28px;
+}
+.footer table{
+	padding-top:50px;
+}
+.footer{
+	background-image: url("footer.png")
+}
+.footer th{
+	font-family:Trebuchet MS;
+	color:white;	
+	font-size:25px;
+	width:1000px;
+}
+.footer th img{
+	height: 80px; 
+	width: 200px;
+}
+.footer th::first-letter{
+	font-size:35px;
+}
+.footer td{
+	font-size:18px;
+	font-family:Bahnschrift;
+	width:500px;
+	color:black;
+}
+.footer ul li a{
+	text-decoration:none;
+	color:black;
+}
+.footer ul li a:hover{
+  font-size:20px;
+  text-decoration: none;
+  color:white;
+  border-radius:35px;
+	
+}
+.footer td .facebook img:hover{
+	height:35px;
+	width:35px;
+}
+.footer td .twitter img:hover{
+	height:35px;
+	width:35px;
+}
+
+.bottom{
+	height:10px;
+	background-color:white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.s  {
+  background-color: #33cccc;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.s:hover {
+  opacity: 0.8;
+  background-color: white;
+  color:#33cccc;
+} 
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 14px 20px;
+  background-color: #ff0800;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.cancelbtn:hover {
+  opacity: 0.8;
+  background-color: white;
+  color:#ff0800;
+} 
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 12px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+  height: 10%;
+  padding-top: 3%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+ span.psw {
+     display: block;
+     float: none;
+}
+
+.cancelbtn {
+     width: 100%;
+}
+.radio{
+	border:none;
+	text-align:left;
+}
+.radio td {
+	width:50px;
+}}

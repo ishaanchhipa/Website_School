@@ -1,0 +1,21 @@
+/* ABOUT US */
+.about h1{
+	padding-left: 20px;
+	background-color:#c5ebeb;
+	margin-top:0px;
+}
+
+.about h2{
+	padding-left: 5%;
+	color:#014186;
+}
+
+.about p{
+	padding-left: 10%;
+	padding-right: 10%;
+	color:#014186;
+}
+.bottom{
+	height:5px;
+	background-color:#33cccc;
+}

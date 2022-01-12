@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="academic.css">
+
+	<script src="login.json"></script>
+<script>
+function login(){
+	var myRadio = document.getElementsByName('radio')
+	var txt;
+	var login1 = {"Stu":[{"username": "STU1","password":"123"},
+				   {"username": "STU2","password":"321"}],
+			 "Tch":[{"username": "TCR1","password":"456"},
+				   {"username": "TCR2","password":"654"}],
+			 "Adm":[{"username": "Admin","password":"789"}]
+			}	
+	for(var i=0; i<myRadio.length; i++){
+		if (myRadio[i].checked){
+			txt=myRadio[i].value;
+		}
+	}
+	for(var i=0; i<5;i++){
+		if (txt == "Std"){
+			if(getElementById("uname").value == login["Stu"][i]["username"] && getElementById("psw").value == login["Stu"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Tch"){
+			if(getElementById("uname").value == login["Tch"][i]["username"] && getElementById("psw").value == login["Tch"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Adm"){
+			if(getElementById("uname").value == login["Adm"][i]["username"] && getElementById("psw").value == login[txt][i]["password"]){
+				window.location.href = login["Adm"][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		}
+}
+</script>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+		<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/aboutus.html">ABOUT US</a></li>
+			<li><a href="academic.html">ACADEMICS</a></li>
+			<li><a href="infra.html">INFRASTRUCTURE</a></li>
+			<li><a href="admissions.html">ADMISSIONS</a></li>
+			<li><a href="loginstu.html">STUDENT LOGIN</a></li>
+			<li><a href="logintch.html">TEACHER LOGIN</a></li>
+        	<li><a href="loginadmin.html">ADMIN LOGIN</a></li>
+		</ul>
+`	
+	
+</div>
+</div>
+<div class="academic">
+	<h1>Academics</h1>
+	<p><b>Academic Poicy :</b>
+		<ul>
+			<li>The student will fully respect the school’s endeavor to promote integrity and ethical behavior on all fronts.</li>
+			<li>Any attempt / inclination to cheat, lie, distort or manipulate will be dealt with severity by the school.</li>
+			<li>All work assigned by the school i.e. Homework / Assignments / Projects / any other must be sincerely and diligently attempted by the student and not passed on to any external agency / individuals for completion. Any evidence to this effect will be perceived as a violation of academic honesty.</li>
+			<li>While attempting work assigned, full credit must be given for ideas, language or creative design borrowed from any source. Students are encouraged to understand the keywords / concept and attempt re-writing the material in their own language.</li>
+			<li>Being a silent witness or collaborator to any wrongful behaviour too constitutes a violation of honesty. We expect students to bring on unethical / dishonest act to the attention of teachers and Principal without delay and fear.</li>
+			<li>The School will appreciate and applaud honesty of behaviour and thought and uphold it as brave and rightful behaviour.</li>
+		</ul>
+	</p>
+
+	<p><b>Leave Rules :</b>
+		<ul>
+			<li>In the light of each day at school being unique and incapable of being replicated again, we urge parents to ensure that their wards are present everyday. We expect students to be conscientious about daily attendance too.</li>
+			<li>The class teacher must be notified through the leave record section of the school almanac, in case of illness or non-attendance of school.</li>
+			<li>For leave exceeding a day, Principal’s prior permission is mandatory.</li>
+			<li>Any leave on health grounds must be supported by a medical certificate. The school reserves the right to verify the validity of the certificate.</li>
+			<li>In case of any infectious or contagious disease, we advise quarantine till full recovery. The student will be required to produce a medical fitness certificate to rejoin school.</li>
+			<li>No after-test leave is allowed on the weekly test day for any reason. In case of a truly unavoidable reason, the Principal’s permission is mandatory.</li>
+			<li>75% minimum attendance is mandatory to appear for Half-Yearly and Annual Examinations.</li>
+			<li>No student will be allowed to leave the school on his / her own for any reason.</li>
+			<li>The school is committed to ensuring safety of students with co-operation of both students and parents.</li>
+		</ul>
+	</p>
+
+
+	<h1>Scholorship Criteria</h1>
+	<p><b>Proficiency Award and Scholarship Award</b></p>
+	<p>It is our pleasure to inform you that from the session 2020-21 onwards, the school has decided to honor and recognize the efforts of meritorious and outstanding academic achievers by facilitating them with Special Proficiency and Scholarship Awards.</p>
+	<p>Following are the Special Awards and Scholarships for this session-
+		<ul>
+			<li>Subject wise Topper of all classes from class-VI to class- IX will be awarded the Certificate of Excellence in the particular subject.</li>
+			<li>Class wise topper (of all sections) will be awarded Class Topper badges.</li>
+			<li>Certificate of Merit will be awarded to the students who obtain the highest marks in classes ( 3rd, 4th, and 5th) across all sections in each of the following subjects: English, Mathematics, General Science, Social Studies, Third Language and Computer Science. However, no position will be awarded to a child who is exempted from Hindi or is doing a lower grade in the subjects.</li>
+			<li>Students scoring 98% aggregate and above in Class-X Board Examinations will be given a 50% waiver in their Annual school fees.</li>
+			<li>Students scoring 95% to 97.5% in Class-X Board Examinations will be given a 25% waiver in their Annual school fees.</li>
+			<li>The All India Topper of Class-X Board Examinations (1st to 5th positions) will be given a 100% waiver in their Annual School Fees.</li>
+		</ul>
+	</p>
+
+	<p><b>Sports Scholarships</b></p>
+	<p>Taking part in sports is important for children as it reduces stress, increases fitness, mental agility, fosters sportsmanship, instills discipline, boosts self-confidence and encourages collaborative work and cooperation. The students of the school have made us proud, time and again by bagging laurels in numerous Sporting events at the International, National, and State Levels. You will be glad to know that in order to encourage our Sporting Stars further and motivate them to scale new heights, the school has decided to offer Sports Scholarships to these young achievers from the Session 2020-21 onwards. The following are the criteria on which the Sports Scholarships will be awarded.
+		<ul>
+			<li>National Level Players will be given a 50% waiver in their Annual School Fees.</li>
+			<li>State Level Players will be given a 25% waiver in their Annual School Fees.</li>
+		</ul>
+	</p>
+	<p><b>Note:</b> These Scholarships are valid for a period of 1 year. Sports Scholarships of international, national and state level must be accredited by the Government of India.</p>
+	<p><b><u>A student will not be eligible for the Proficiency Award, Scholarship Awards & Sports Scholarships if, in the academic year :</u></b>
+		<ul>
+			<li>The student has been found guilty of gross misconduct and has been issued two or more yellow cards.</li>
+			<li>The student has been suspended from school for any period of time.</li>
+			<li>The student has been found guilty of being involved in any defamatory activities against the school or in act bringing disgrace to the school.</li>
+			<li>In case of any dues that are pending with the school Accounts Office, as per the school fee structure</li>
+		</ul>
+	</p>
+	
+</div>
+
+
+<div class="bottom"></div>
+<div class="footer">
+	<table>
+		<tr>
+			<th><img src="LOGO.jpg"></th>
+			<th style="text-align:left;">CONTACT US</th>
+			<th style="text-align:left;">QUICK LINKS</th>
+		</tr>
+		<tr style="text-align:center">
+			<td style="text-align:center;"><a href="#facebook" class="facebook"><img src="fb_hover.png" height="30px" width="30px"></a>
+				<a href="#twitter" class="twitter"><img src="tw_hover.png" height="30px" width="30px"></a></td>
+			<td style="text-align:left">Sector-5 Rohini,<br> 
+				Delhi 11028<br>
+				Phone: 94XXXXXXXX
+			</td>
+			<td style="text-align:left;">
+			<ul style="list-style-type: none;">
+				<li><a href="#About">About</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#Admissions">Admissions</a></li>
+				<li><a href="#LOGIN">Login</a></li>
+			</ul>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

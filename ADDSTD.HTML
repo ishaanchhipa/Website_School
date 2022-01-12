@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="admin.css">
+<script>
+function formValidation(){
+	var sname=document.student.NAME;
+	var mname=document.student.MNAME;
+	var fname=document.student.FNAME;
+	var regno=document.student.regno;
+	var pass=document.student.pass;
+	var age=document.student.age;
+	var gender=document.student.gender;
+	var sclass=document.student.sclass;
+	var contact=document.student.ctc;
+	var address=document.student.add;
+	if (name_val(sname)){
+		if (mname_val(mname)){
+			if (fname_val(fname)){
+				if (regno_val(regno)){
+					if(pass_val(pass)){
+						if (age_val(age)){
+							if (gender_val(gender)){
+								if (class_val(sclass)){
+									if (no_val(contact)){
+										if (addr_val(address)){
+											return true;}}}}}}}}}}
+	return false;
+}
+function name_val(name){
+	var letters1 = /^[a-zA-Z][a-zA-Z ]{2,}$/;
+	if(name.value.match(letters1)){
+		return true;
+	}
+	else{
+		alert('Enter the Name');
+		return false;
+	}
+}
+function mname_val(name){
+	var letters1 = /^[a-zA-Z][a-zA-Z ]{2,}$/;
+	if(name.value.match(letters1)){
+		return true;
+	}
+	else{
+		alert("Enter the Mother's Name");
+		return false;
+	}
+}
+function fname_val(name){
+	var letters1 = /^[a-zA-Z][a-zA-Z ]{2,}$/;
+	if(name.value.match(letters1)){
+		return true;
+	}
+	else{
+		alert("Enter the Father's Name");
+		return false;
+	}
+}
+function regno_val(reg){
+	var regformat=/^([a-zA-Z]{5})+([0-9]{3})$/;
+	if(reg.value.match(regformat)){
+		return true;
+	}
+	else{
+		alert('Invalid Registration Number');
+		return false;
+	}
+}
+function pass_val(pass){
+	if(pass.value==""){
+	alert('Please enter the password.')
+	return false;
+	}
+	return true;
+}
+function age_val(age){
+	var num1 = /^[0-9]{1,2}$/;
+	if(age.value == ""){
+		alert('Enter the Age');
+	}
+	else if(age.value.match(num1)){
+		return true;
+	}
+	else{
+		alert('Invalid Age');
+		return false;
+	}
+}
+function gender_val(gender) {
+        var gen = form.querySelectorAll('input[name="gender"]:checked');
+        if (!gen.length) {
+            alert('You must select a gender');
+            return false;
+        }
+    }
+function class_val(sclass){
+	if(sclass.value==""){
+	alert('Please enter the Class.')
+	return false;
+	}
+	return true;
+}
+function no_val(contact){
+	var num1 = /^[0-9]{10}$/;
+	if(contact.value == ""){
+		alert('Enter the Number');
+	}
+	else if(contact.value.match(num1)){
+		return true;
+	}
+	else{
+		alert('Invalid Number');
+		return false;
+	}
+}
+function addr_val(addr){
+	var paddz = /^[A-Za-z]+$/;
+	if(addr.value.match(paddz)){
+		return true;
+	}
+	else{
+		alert('Enter the Address');
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+	<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/ADMIN.HTM">ADMIN INFO</a></li>
+			<li><a href="ADDSTD.HTML">ADD STUDENT</a></li>
+			<li><a href="ADDTCR.HTML">ADD TEACHER</a></li>
+			<li><a href="/home.html">LOG OUT</a></li>
+		</ul>
+		
+	</div>
+	</div>
+	<div class="stdform" align="center">
+	<form  id="addstu" action="/ADDSTD.htm" method="post">
+	<table>
+	<tr><td>Name:</td><td><input type="text" name="NAME" id="name"></td></tr>
+	<tr><td>Mother's Name:</td><td><input type="text" name="MNAME" id="mname"></td></tr>
+	<tr><td>Father's Name:</td><td><input type="text" name="FNAME" id="fname"></td></tr>
+	<tr><td>Registration Number:</td><td><input type="text" name="regno"id="regno"></td></tr>
+	<tr><td>Password:</td><td><input type="password" name="pass" id="pass"></td></tr>
+	<tr><td>Date of birth:</td><td><input type="date" name="dob" id="dob"></td></tr>
+	<tr><td>Age:</td><td><input type="text" name="age" id="age"></td></tr>
+	<tr><td>Gender:</td><td><input type="radio" id="gender" name="gender" value="male">Male&nbsp;&nbsp;<input type="radio" id="gender" name="gender" value="female">Female&nbsp;&nbsp;<input type="radio" id="gender" name="gender" value="other">Other</td></tr>
+	<tr><td>Class:</td><td><input type="text" name="sclass" id="sclass"></td></tr>
+	<tr><td>Contact:</td><td><input type="text" name="ctc" id="contact"></td></tr>
+	<tr><td>Address:</td><td><textarea name="add" placeholder="Enter Text Here..." id="addr"></textarea></td></tr>
+	<tr>
+	<td><button type="submit" class="button" onclick="formValidation()">ADD</button></td><td>
+		<button class="button" type="reset" value="reset">Clear</button></td>
+	</tr>
+	</table>
+	</form>
+	</div>
+<div class="bottom"></div>
+	</body>
+	</html>
+	

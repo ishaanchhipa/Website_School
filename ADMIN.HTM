@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="admin.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type = "text/javascript">
+		var arrayOfItem = []
+        function loadJson() {
+            console.log("The data file is here!");
+            var http_request = new XMLHttpRequest();
+            http_request.onreadystatechange = function () {
+                if (http_request.readyState == 4) {
+                    console.log("The response text is here!");
+                    console.log(http_request.responseText)
+                    var obj = JSON.parse(http_request.responseText);
+                    console.log("The JSON Object is here!");
+                    console.log(obj);
+						document.getElementById('name').append(obj.Name)
+						document.getElementById('uname').append(obj.User_ID)
+						document.getElementById('gender').append(obj.Gender)
+						document.getElementById('age').append(obj.Age)
+						document.getElementById('address').append(obj.Address)
+                 }
+            }
+            http_request.open("GET","http://localhost:4200/data_file", true);//()
+            http_request.send();
+        }
+	 </script>
+
+	 <style>
+		 .admintable{
+			color:#014186;
+			font-size: 22px;
+		 }
+	 </style>
+</head>
+<body onload="loadJson()">
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+	<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/ADMIN.HTM">ADMIN INFO</a></li>
+			<li><a href="ADDSTD.HTML">ADD STUDENT</a></li>
+			<li><a href="ADDTCR.HTML">ADD TEACHER</a></li>
+			<li><a href="/home.html">LOG OUT</a></li>
+		</ul>
+		
+	</div>
+</div>
+<div class="admininfo">
+		<h2>Admin Information</h2>
+			<p><b>Welcome Back! Admin</b></p><br>
+		<div class="ig" align="center"><img src="login.png"></div>
+		<table class="admintable" align="center">
+			<tr><td><b>Name:</b></td><td id="name"></td></tr>
+			<tr><td><b>User ID:</b></td><td id="uname"></td></tr>
+			<tr><td><b>Gender:</b></td><td id="gender"></td></tr>
+			<tr><td><b>Age:</b></td><td id="age"></td></tr>
+			<tr><td><b>Address:</b></td><td id="address"></td></tr>
+		</table>
+	</div>
+<div class="bottom"></div>
+
+</body>
+</html>

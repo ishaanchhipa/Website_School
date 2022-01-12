@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="aboutus.css">
+
+	<script src="login.json"></script>
+<script>
+function login(){
+	var myRadio = document.getElementsByName('radio')
+	var txt;
+	var login1 = {"Stu":[{"username": "STU1","password":"123"},
+				   {"username": "STU2","password":"321"}],
+			 "Tch":[{"username": "TCR1","password":"456"},
+				   {"username": "TCR2","password":"654"}],
+			 "Adm":[{"username": "Admin","password":"789"}]
+			}	
+	for(var i=0; i<myRadio.length; i++){
+		if (myRadio[i].checked){
+			txt=myRadio[i].value;
+		}
+	}
+	for(var i=0; i<5;i++){
+		if (txt == "Std"){
+			if(getElementById("uname").value == login["Stu"][i]["username"] && getElementById("psw").value == login["Stu"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Tch"){
+			if(getElementById("uname").value == login["Tch"][i]["username"] && getElementById("psw").value == login["Tch"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Adm"){
+			if(getElementById("uname").value == login["Adm"][i]["username"] && getElementById("psw").value == login[txt][i]["password"]){
+				window.location.href = login["Adm"][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		}
+}
+</script>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+		<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="aboutus.html">ABOUT US</a></li>
+			<li><a href="academic.html">ACADEMICS</a></li>
+			<li><a href="infra.html">INFRASTRUCTURE</a></li>
+			<li><a href="admissions.html">ADMISSIONS</a></li>
+			<li><a href="loginstu.html">STUDENT LOGIN</a></li>
+			<li><a href="logintch.html">TEACHER LOGIN</a></li>
+        	<li><a href="loginadmin.html">ADMIN LOGIN</a></li>
+		</ul>
+
+	
+</div>
+</div>
+<div class="about">
+	<h1>About Us</h1>
+	<h2>About the School</h2>
+	<p>The school was established in 2004. In seventeen years, the school has carved a niche for itself and is counted among the best schools in India. Bettering the best in Academics, Extra-curricular activities and sports, the school has succeeded in bringing out well-rounded personalities-students who are academically bright, physically strong, mentally agile, emotionally balanced, socially committed and spiritually serene.<br><br>
+DPS Modern Indian School stands a class apart as "The School with a Difference"
+	</p>
+
+	<h2>Career in DPS</h2>
+	<p>A background in education is essential, and a good candidate for a teaching position will have taken higher education classes in the fields of psychology, child development, school teacher education, classroom management, and curriculum.<br><br>
+	   Being a successful teacher requires extraordinary levels of patience, enthusiasm, creativity, and, above all, a love of childhood education. A teacher must understand the needs of both the children and their parents. As the link between home and school, communicating effectively with parents is crucial to developing a good relationship with the children and helping them grow. Also, children develop and learn at very different speeds, so it’s important to be extremely patient with those who are having difficulty. A good teacher creates an encouraging atmosphere in which all students support each other.<br><br>
+	    Managing a classroom full of young children can be very challenging. You have to gain the respect of the children without scaring them. You want to be their friend but also want them to treat you as an authority figure just as they would their parents. A successful teacher is able to control a classroom while always keeping things educational and fun. Organization is extremely important. Even though a classroom may look messy, there should always be an underlying organizational theme tied to education--or else it’s just a playpen. Creating a welcoming, engaging environment in which the children can learn while playing is essential.<br><br>
+	   Above all, to be successful DPS-MIS teacher, you should really believe in what you are doing. You should care tremendously about the progress and well-being of each and every child in the classroom. Teaching in different levels can be tiring and stressful, but it is also incredibly rewarding in the end. You should always do your best to encourage children and foster their learning.</p>
+
+	<p style="text-align:center; color:black;"><br>Mail us your resume to : hr@dps.com</p> 
+</div>
+
+
+<div class="bottom"></div>
+<div class="footer">
+	<table>
+		<tr>
+			<th><img src="LOGO.jpg"></th>
+			<th style="text-align:left;">CONTACT US</th>
+			<th style="text-align:left;">QUICK LINKS</th>
+		</tr>
+		<tr style="text-align:center">
+			<td style="text-align:center;"><a href="#facebook" class="facebook"><img src="fb_hover.png" height="30px" width="30px"></a>
+				<a href="#twitter" class="twitter"><img src="tw_hover.png" height="30px" width="30px"></a></td>
+			<td style="text-align:left">Sector-5 Rohini,<br> 
+				Delhi 11028<br>
+				Phone: 94XXXXXXXX
+			</td>
+			<td style="text-align:left;">
+			<ul style="list-style-type: none;">
+				<li><a href="#About">About</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#Admissions">Admissions</a></li>
+				<li><a href="#LOGIN">Login</a></li>
+			</ul>
+			</td>
+		</tr>
+	</table>
+	<div class="bottom"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+ h2{
+	background-color:#c5ebeb;
+	margin-top:0px;
+	text-align:center;
+	
+}
+
+.stuinfo img{
+	height: 90px;
+	width:90px;
+}
+
+ p{
+	color:#014186;
+	text-align:center;
+	font-size: 22px;
+	
+}
+
+ .stuinfo ul{
+	list-style-type: none;
+	display: block;
+	color:#014186;
+	text-align:left;
+	margin-left:32.5%;
+	font-size: 22px;	
+}
+
+ table {
+	color:#014186;
+	font-size: 22px;
+}

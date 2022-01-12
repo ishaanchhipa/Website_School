@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="tch.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body >
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+	<table align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/TCR1">TEACHER INFO</a></li>
+			<li><a href="ATTENDANCE.HTML">ADD ATTENDANCE</a></li>
+			<li><a href="ADD_MARKS.HTML">ADD MARKS</a></li>
+			<li><a href="/home.html">LOG OUT</a></li>
+		</ul>
+		
+	</div>
+	</div>
+	<div class="tcrinfo" align="center">
+		<h2>Add Marks</h2>
+			<br>
+		<img src="login.png">
+		<div class="stdform" align="center">
+	<form id="addmrks" action="/ADD_MARKS.HTML" method="post" ng-app="myApp" ng-controller="validateCtrl" name="myForm" ng-submit="onSubmit()">
+	<table>
+	<tr><td>Name:</td><td><input type="text" name="NAME" id="name" ng-model="NAME" ng-required="true">
+		<span style="color:red" ng-show="myForm.NAME.$touched &&myForm.NAME.$invalid">
+			<span ng-show="myForm.NAME.$touched &&myForm.NAME.$error.required"> Name is required.</span>
+		</span></td></tr>
+	<tr><td>Registration Number:</td><td><input type="text" name="regno" id="reg" ng-model="regno" ng-required="true">
+		<span style="color:red" ng-show="myForm.regno.$touched &&myForm.regno.$invalid">
+			<span ng-show="myForm.regno.$touched &&myForm.regno.$error.required"> Reg No. is required.</span>
+		</span></td></tr>
+	<tr><td>Course:</td><td><select name="course" id="course">
+                            <option value="english">English</option>
+                            <option value="maths">Maths</option>
+                            <option value="science">Science</option>
+                            <option value="social">Social Studies</option>
+</select></td></tr>
+	<tr><td>Marks Obtained:</td><td><input type="text" name="marks" id="marks" ng-model="marks" required>
+		<span style="color:red" ng-show="myForm.marks.$touched &&myForm.marks.$invalid">
+			<span ng-show="myForm.marks.$touched &&myForm.marks.$error.required"> Marks is required.</span>
+		</span></td></tr>
+	<tr><td><button class="button" type="submit" value="Submit">ADD</button></td><td><button class="button" type="reset" value="reset">Clear</button></td></tr>
+	</table>
+	</form>
+	</div>
+	</div>
+<div class="bottom"></div>
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('validateCtrl', function ($scope) {
+		$scope.NAME = 'Ishaan';
+		$scope.regno ='ABCDE001';
+		$scope.marks ='100';
+	});
+	</script>
+</body>
+</html>

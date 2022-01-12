@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="tch.css">
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+		<h1><a href="home.html">DPS-Modern Indian School</a></h1>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="TCR2.HTML">TEACHER INFO</a></li>
+			<li><a href="ATTENDANCE2.HTML">ADD ATTENDANCE</a></li>
+			<li><a href="ADD_MARKS2.HTML">ADD MARKS</a></li>
+			<li><a href="home.html">LOG OUT</a></li>
+		</ul>
+		
+	</div>
+	</div>
+	<div class="tcrinfo" align="center">
+		<h2>Add Marks</h2>
+			<p>Welcome Back!</p><br>
+		<img src="login.png">
+		<div class="stdform" align="center">
+	<form name="student" onsubmit="return validate()">
+	<table>
+	<tr><td>Name:</td><td><input type="text" name="NAME"></td></tr>
+	<tr><td>Registration Number:</td><td><input type="text" name="regno"></td></tr>
+	<tr><td>Course:</td><td><select name="course" id="course">
+                            <option value="english">English</option>
+                            <option value="maths">Maths</option>
+                            <option value="science">Science</option>
+                            <option value="social">Social Studies</option>
+</select></td></tr>
+	<tr><td>Marks Obtained:</td><td><input type="text" name="marks"></td></tr>
+	<tr><td><button class="button" type="submit" value="Submit" onclick="formValidation()">ADD</button></td><td><button class="button" type="reset" value="reset">Clear</button></td></tr>
+	</table>
+	</form>
+	</div>
+	</div>
+	<div class="bottom"></div>
+</body>
+</html>

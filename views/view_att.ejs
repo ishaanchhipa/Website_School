@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="stu.css">
+<style>
+    .atttable th{
+        background-color: #33cccc;
+        color: white;
+    }
+
+    .atttable td,th{
+        width: 200px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+<div class="name">
+<table align="center">
+<tr>
+<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+</tr>
+</table>
+</div>
+<div class="navbar">
+<ul>
+<li><a href="/STU1">STUDENT INFO</a></li>
+<li><a href=""/view_att.html"">ATTENDANCE</a></li>
+<li><a href="/View_Marks.HTML">MARKS</a></li>
+<li><a href="/home.html">LOG OUT</a></li>
+</div>
+</div>
+<div id="stuinfo" align="center">
+<h2>Attendance</h2>
+<table class="atttable">
+<tr><th>Name</th>
+<th>Reg. No.</th>
+<th>Date</th>
+<th>Attendance</th></tr>
+<% for (var i in result) { %>
+<div>
+<td><%= result[i].name %></td>
+<td><%= result[i].reg %></td>
+<td><%= result[i].date %></td>
+<td><%= result[i].Attendance %></td></tr>
+</div>
+<% } %>
+</body>
+</html>

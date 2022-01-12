@@ -1,0 +1,6 @@
+var login1 = {"Stu":{"cr1":{"username":"STU1","password":"123"},
+					 "cr2":{"username":"STU2","password":"321"}},
+			 "Tch":[{"username": "TCR1","password":"456"},
+				   {"username": "TCR2","password":"654"}],
+			 "Adm":[{"username": "Admin","password":"789"}]
+			}		  

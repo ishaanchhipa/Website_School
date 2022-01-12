@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="admissions.css">
+	
+	<script src="login.json"></script>
+<script>
+function login(){
+	var myRadio = document.getElementsByName('radio')
+	var txt;
+	var login1 = {"Stu":[{"username": "STU1","password":"123"},
+				   {"username": "STU2","password":"321"}],
+			 "Tch":[{"username": "TCR1","password":"456"},
+				   {"username": "TCR2","password":"654"}],
+			 "Adm":[{"username": "Admin","password":"789"}]
+			}	
+	for(var i=0; i<myRadio.length; i++){
+		if (myRadio[i].checked){
+			txt=myRadio[i].value;
+		}
+	}
+	for(var i=0; i<5;i++){
+		if (txt == "Std"){
+			if(getElementById("uname").value == login["Stu"][i]["username"] && getElementById("psw").value == login["Stu"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Tch"){
+			if(getElementById("uname").value == login["Tch"][i]["username"] && getElementById("psw").value == login["Tch"][i]["password"]){
+				window.location.href = login[txt][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		else if (txt == "Adm"){
+			if(getElementById("uname").value == login["Adm"][i]["username"] && getElementById("psw").value == login[txt][i]["password"]){
+				window.location.href = login["Adm"][i]["username"]+".HTML";}
+			else
+			{alert("!Invalid Username & password")}}
+		}
+}
+</script>
+</head>
+<body>
+<div class="bottom"></div>
+<div class="header">
+	<div class="name">
+		<table class="name2" align="center">
+	<tr>
+		<td style="padding-right:50px;"><a href="home.html"><img src="LOGO.jpg" height="40px" width="100px;"></a></td>
+		<td><h1><a href="home.html">DPS-Modern Indian School</a></h1></td>
+	</tr>
+	</table>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="/aboutus.html">ABOUT US</a></li>
+			<li><a href="academic.html">ACADEMICS</a></li>
+			<li><a href="infra.html">INFRASTRUCTURE</a></li>
+			<li><a href="admissions.html">ADMISSIONS</a></li>
+			<li><a href="loginstu.html">STUDENT LOGIN</a></li>
+			<li><a href="logintch.html">TEACHER LOGIN</a></li>
+        	<li><a href="loginadmin.html">ADMIN LOGIN</a></li>
+		</ul>
+</div>
+</div>
+<div class="admission">
+	<h1>Admissions</h1>
+	<p><b>Please Note :</b></p>
+		<ul>
+			<li>We follow C.B.S.E curriculum only.</li>
+			<li>Our academic session is from APRIL to MARCH.</li>
+			<li>July, August are summer holidays and December winter holidays.</li>
+			<li>We have classes from Nursery to XII.</li>
+			<li>Admission is purely on merit which will be decided based on the performance of the child in the exams conducted in the previous school and the ADMISSION TEST conducted by us.</li>
+			<li>Students should appear for admission test in English and Mathematics (Classes III - V) ; English , Mathematics and Science (Classes VI – XI) .</li>
+			<li>Mid –Term admission will be done only if there is a vacancy. Syllabus will be according to term wise.</li>
+			<li>There is no online pre- registration option available. Admission requests are entertained only against vacancy status.</li>
+			<li>In case a child wants to join our school in the middle of the academic year subject to availability of seat he / she should take the admission test in the topics covered in our school at that particular term.</li>
+		</ul>
+
+	<p><b>Subjects and Languages Offered :</b></p>
+	<table id="syllabus">
+		<tr>
+			<th>S.NO.</th>
+			<th>CLASSES</th>
+			<th>I LANGUAGE</th>
+			<th>II LANGUAGE</th>
+			<th>III LANGUAGE</th>
+			<th>MAIN SUBJECTS</th>
+		</tr>
+		<tr>
+			<td rowspan="4">1.</td>
+			<td rowspan="4">I - II</td>
+			<td rowspan="4">English</td>
+			<td>Hindi</td>
+			<td rowspan="4">&lt;N.A.&gt;</td>
+			<td>Mathematics</td>
+		</tr>
+		<tr>
+			<td>French</td>
+			<td>General Science</td>		
+		</tr>
+		<tr>
+			<td>Tamil</td>
+			<td>Social Studies</td>		
+		</tr>
+		<tr>
+			<td>Malayalam</td>
+			<td>Computer</td>		
+		</tr>
+		<tr>
+			<td rowspan="8">2.</td>
+			<td rowspan="8">III - VIII</td>
+			<td rowspan="8">English</td>
+			<td rowspan="2">Hindi</td>
+			<td>Hindi</td>
+			<td rowspan="2">Mathematics</td>
+		</tr>
+		<tr>
+			<td>French</td>
+		</tr>
+		<tr>
+			<td rowspan="2">French</td>
+			<td>Tamil</td>
+			<td rowspan="2">General Science</td>
+		</tr>
+		<tr>
+			<td>Malayalam</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Tamil</td>
+			<td>Telgu</td>
+			<td rowspan="2">Social Studies</td>
+		</tr>
+		<tr>
+			<td>Marathi</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Malayalam</td>
+			<td>Sanskrit</td>
+			<td rowspan="2">Computer</td>
+		</tr>
+		<tr>
+			<td>Urdu</td>
+		</tr>
+		<tr>
+			<td rowspan="4">3.</td>
+			<td rowspan="4">IX - X</td>
+			<td rowspan="4">English</td>
+			<td>Hindi</td>
+			<td rowspan="4">&lt;N.A.&gt;</td>
+			<td>Mathematics</td>
+		</tr>
+		<tr>
+			<td>French</td>
+			<td>General Science</td>		
+		</tr>
+		<tr>
+			<td>Tamil</td>
+			<td>Social Studies</td>		
+		</tr>
+		<tr>
+			<td>Malayalam</td>
+			<td>Computer</td>		
+		</tr>
+		<tr><td colspan="6"></td></tr>
+		<tr>
+			<th colspan="2">Classes</th>
+			<th>Stream</th>
+			<th>Main Subjects</th>
+			<th>Optional A (Select one)</th>
+			<th>Optional B (Select one)</th>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="13">XI - XII</td>
+			<td rowspan="5">SCIENCE</td>
+			<td>English</td>
+			<td>Mathematics</td>
+			<td>Biology</td>
+		</tr>
+		<tr>
+			<td>Physics</td>
+			<td>Psychology</td>
+			<td>Computer Science</td>
+		</tr>
+		<tr>
+			<td>Chemistry</td>
+			<td rowspan="3"></td>
+			<td>Economics</td>
+		</tr>
+		<tr>
+			<td rowspan="2"></td>
+			<td>Physical Education</td>
+		</tr>
+		<tr>			
+			<td>Engineering Graphics</td>
+		</tr>
+		<tr><td colspan="4"></td></tr>
+		<tr>
+			<td rowspan="3">COMMERCE</td>
+			<td>English</td>
+			<td>Mathematics</td>
+			<td>Computer Science</td>
+		</tr>
+		<tr>
+			<td>Accountancy</td>
+			<td>Applied Mathematics</td>
+			<td>Economics</td>
+		</tr>
+		<tr>
+			<td>Business Studies</td>
+			<td>Psychology</td>
+			<td>Physical Education</td>
+		</tr>
+		<tr><td colspan="4"></td></tr>
+		<tr>
+			<td rowspan="3">HUMANITIES</td>
+			<td>English</td>
+			<td>Psychology</td>
+			<td>Computer Science</td>
+		</tr>
+		<tr>
+			<td>History</td>
+			<td rowspan="2"></td>
+			<td>Economics</td>
+		</tr>
+		<tr>
+			<td>Political Science</td>
+			<td>Physical Education</td>
+		</tr>
+	</table>
+
+	<p><b>Following Documents have to be brought at the time of admission :</b></p>
+		<ul style="list-style-type:disc">
+			<li>Copy of Aadhaar Card Father</li><br>
+			<li>Copy of Aadhaar Card Mother</li><br>
+			<li>Copy of Aadhaar Card Child</li><br>
+			<li>Health card &#47; Health Insurance card copy of the child</li><br>
+			<li>Blood group medically proven document of the child</li><br>
+			<li>4-Passport size photographs of the child</li><br>
+			<li>1-Passport size photographs of father</li><br>
+			<li>1-Passport size photographs of mother</li><br>
+			<li>Copy Of Birth Certificate of the Child &#40;Class Nur to Class V&#41;</li><br>
+			<li>Copy of Immunization Card of the Child &#40;Class Nur to Class II&#41;</li><br>
+			<li>Copy of Report Card from the previous school &#40;Class Prep to Class XII&#41;</li><br>
+			<li>Transfer Certificate &#40;Original&#41; from the previous school &#40;Class Prep to Class XII)</li><br>
+			<li>Migration certificate only if the child is from other board &#40;XI & XII&#41;</li><br>
+		</ul>
+
+	<p><b>Please Note :</b></p>
+		<ul style="list-style-type:square">
+			<li>The decision of the Principal / designate shall be final.</li>
+			<li>Age Limit: The child should have completed 3.6 years (ie 3 years and 6 months) as on 1st of April  for Nursery(KG-I)  and 5 years and 6 months for class I.</li>
+			<li>	For Nursery & Prep child's preparedness for the specified grade is tested. In class I to V, a written test is conducted in English and Maths, VI to X written test is conducted in English, Maths and Science. All test are followed by interaction with the Principal.</li>
+		</ul>	
+</div>
+
+
+<div class="bottom"></div>
+<div class="footer">
+	<table>
+		<tr>
+			<th><img src="LOGO.jpg"></th>
+			<th style="text-align:left;">CONTACT US</th>
+			<th style="text-align:left;">QUICK LINKS</th>
+		</tr>
+		<tr style="text-align:center">
+			<td style="text-align:center;"><a href="#facebook" class="facebook"><img src="fb_hover.png" height="30px" width="30px"></a>
+				<a href="#twitter" class="twitter"><img src="tw_hover.png" height="30px" width="30px"></a></td>
+			<td style="text-align:left">Sector-5 Rohini,<br> 
+				Delhi 11028<br>
+				Phone: 94XXXXXXXX
+			</td>
+			<td style="text-align:left;">
+			<ul style="list-style-type: none;">
+				<li><a href="#About">About</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#Admissions">Admissions</a></li>
+				<li><a href="#LOGIN">Login</a></li>
+			</ul>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

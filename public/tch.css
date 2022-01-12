@@ -1,0 +1,53 @@
+.tcrinfo h2{
+	background-color:#c5ebeb;
+	margin-top:0px;
+	text-align:center;
+	
+}
+
+.tcrinfo img{
+	height:90px;
+	width:90px;
+}
+
+.tcrinfo p{
+	color:#014186;
+	text-align:center;
+	font-size: 22px;
+	
+}
+
+.tcrinfo ul{
+	list-style-type: none;
+	display: block;
+	color:#014186;
+	text-align:left;
+	margin-left:32.5%;
+	font-size: 22px;	
+}
+
+.stdform td{
+	color:#014186;
+	font-size: 22px;
+}
+
+.button  {
+  background-color: #33cccc;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  opacity: 0.8;
+  background-color: white;
+  color:#33cccc;
+} 
+
+.tcrtable {
+	color:#014186;
+	font-size: 22px;
+}
